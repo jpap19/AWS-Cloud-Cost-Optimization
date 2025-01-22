@@ -15,11 +15,11 @@ For each snapshot, it checks if the associated volume (if exists) is not associa
 
 <h2>Program walk-through:</h2>
 
-The implementation will be in done in 6 Steps:
+The implementation will be in done in two Steps:
 
 STEP 1: Create an EBS volume snapshot of a virtual machine (EC2 instance).
 
-STEP 2: Create a lambda function to delete the virtual machine (EC2 instance).
+STEP 2: Create a lambda function to delete any Snapshot that has a volume not attached to a virtual machine (EC2 instance).
 
 <p align="center">
  
@@ -58,7 +58,7 @@ From the EC2 dashboard, we will choose snapshot and create a snapshot of the vol
 <br />
 <br />
 
-STEP 2: Create a lambda function to delete the virtual machine (EC2 instance).
+STEP 2: STEP 2: Create a lambda function to delete any Snapshot that has a volume not attached to a virtual machine (EC2 instance).
 
 Will go the lambda dashboard click on create function, choose python as runtime, keep the default permission and create the lambda function.                     
 
