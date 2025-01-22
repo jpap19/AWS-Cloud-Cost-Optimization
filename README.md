@@ -120,7 +120,7 @@ After the permission granted to the lambda fuunction to list and delete. let run
 
 Now let give create an IAM policy (EC2-permission) to describe volume and describe instances snapshots: From the IAM dashboard, click on create policy, choose EC2 and allow the required permissions.
 Then, From the lambda function selected, choose configuration Tab and click on permission, click on the role name and then attach the new policy created.
-After the new permission granted to the lambda fuunction to list and delete. let run the test again: expected results is to fail due to describe volume and describe instances missing permission
+After the new permission, let run the test again: expected result is to pass this time because describe volume and describe instances missing permission have been granted to the lambda function.
  
 2.8 Lambda function got executed this time : <br/>
 
@@ -129,9 +129,7 @@ After the new permission granted to the lambda fuunction to list and delete. let
 <br />
 
 After grating the required permission to delete, decribe snapshot and instances, the lambda function script is executed, but the snapshot will still not be deleted. 
-This is expected as the snapshot has its volume associated with the EC2 imstance.
-
-Now let delete our EC2 Instance, this will delete the volume as well, but the snapshot will still be there
+This is expected as the snapshot has its volume associated with the EC2 imstance. Now let delete our EC2 Instance, this will delete the volume as well, but the snapshot will still be there
 
 2.9 EC2 Instance deleted : <br/>
 
