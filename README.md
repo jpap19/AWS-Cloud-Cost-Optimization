@@ -27,7 +27,7 @@ STEP 2: Create a lambda function to delete any Snapshot that has a volume not at
 
 STEP 1: Create an EBS volume snapshot of a virtual machine (EC2 instance): <br/>
 
-Here we will create an EC2 instance and then create a snapshot of that instance, which basically an image of the instance.
+Here we will create an EC2 instance and then create a snapshot of that instance, which is basically an image of the instance.
 
 1.1 EC2 Instance created: <br/>
 
@@ -50,6 +50,7 @@ From the EC2 dashboard, we can choose Volume and see the volume created that is 
 <img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/Volume%20created%20along%20side%20with%20the%20EC2%20instance.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
+
 From the EC2 dashboard, we will choose snapshot and create a snapshot of the volume.
 
 1.4 snapshot of the volume created : <br/>
@@ -60,7 +61,7 @@ From the EC2 dashboard, we will choose snapshot and create a snapshot of the vol
 
 STEP 2: STEP 2: Create a lambda function to delete any Snapshot that has a volume not attached to a virtual machine (EC2 instance).
 
-Will go the lambda dashboard click on create function, choose python as runtime, keep the default permission and create the lambda function.                     
+From the lambda dashboard click on create function, choose python as runtime, keep the default permission and create the lambda function.                     
 
 2.1 Lambda function created: <br/>
 
@@ -93,7 +94,7 @@ Since lambda function excecution time is 3 seconds by default, let increase it t
 <br />
 <br />
 
-Now let give create an IAM policy to grant permission to list and delete snapshots: From the IAM dashboard, click on create policy, choose EC2 and allow the required permissions
+Now let create an IAM policy to grant permission to list and delete snapshots: From the IAM dashboard, click on create policy, choose EC2 and allow the required permissions
  
 2.5 IAM policy created to grant permission to list and delete snapshots : <br/>
 
