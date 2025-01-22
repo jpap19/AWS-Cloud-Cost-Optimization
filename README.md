@@ -30,7 +30,7 @@ Here we will create an EC2 instance and then create a snapshot of that instance,
 
 1.1 EC2 Instance created: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/EC2%20Instance%20created.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
@@ -38,7 +38,7 @@ Volume will be created along side with the EC2 instance.
 
 1.2 Volume created along side with the EC2 instance: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/Volume%20created%20along%20side%20with%20the%20EC2%20instance2.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
@@ -46,14 +46,14 @@ From the EC2 dashboard, we can choose Volume and see the volume created that is 
 
 1.3 Volume created along side with the EC2 instance 2: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/Volume%20created%20along%20side%20with%20the%20EC2%20instance.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 From the EC2 dashboard, we will choose snapshot and create a snapshot of the volume.
 
 1.4 snapshot of the volume created : <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/snapshot%20of%20the%20volume%20created.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
@@ -63,7 +63,7 @@ Will go the lambda dashboard click on create function, choose python as runtime,
 
 2.1 Lambda function created: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/Lambda%20function%20created.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
@@ -72,7 +72,7 @@ Then it will verify if a snapshot belongs to a volume and if that volume is atta
 
 2.2 ebs_stale_snapshots_python code: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/ebs_stale_snapshots_python%20code.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
@@ -80,7 +80,7 @@ After replacing the code, we will save, deploy and then test the function: This 
 
 2.3 ebs_stale_snapshots_Test Failed: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/ebs_stale_snapshots_Test%20Failed.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
@@ -88,7 +88,7 @@ Since lambda function excecution time is 3 seconds by default, let increase it t
 
 2.4 Lambda execution time increased: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/Lambda%20execution%20time%20increased.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
@@ -96,15 +96,15 @@ Now let give create an IAM policy to grant permission to list and delete snapsho
  
 2.5 IAM policy created to grant permission to list and delete snapshots : <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/IAM%20policy%20created%20to%20grant%20permission%20to%20list%20and%20delete%20snapshots.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
 Now let give the required permission for the lambda function: From the lambda function selected, choose configuration Tab and click on permission, click on the role name and then attach the policy created here above
  
-2.6 IAM policy attched to the lambda function role name: <br/>
+2.6 IAM policy attached to the lambda function role name: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/IAM%20policy%20attched%20to%20the%20lambda%20function%20role%20name.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
@@ -112,7 +112,7 @@ After the permission granted to the lambda fuunction to list and delete. let run
 
 2.7 Test failed due to describe volume and describe instances missing permission: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/Test%20failed%20due%20to%20describe%20volume%20and%20describe%20instances%20missing%20permission.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
@@ -122,63 +122,51 @@ After the new permission granted to the lambda fuunction to list and delete. let
  
 2.8 Lambda function got executed this time : <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/ambda%20function%20got%20executed%20this%20time.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
-After grating the required permission to delete, decribe snapshot and instances, the lambad function script is executed, but the snapshot is still not deleted. 
-This is expected as the snapshot is as its volume associated with the EC2 imstance.
-
-2.8 Lambda function got executed this time : <br/>
-
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
-<br />
-<br />
+After grating the required permission to delete, decribe snapshot and instances, the lambda function script is executed, but the snapshot will still not be deleted. 
+This is expected as the snapshot has its volume associated with the EC2 imstance.
 
 Now let delete our EC2 Instance, this will delete the volume as well, but the snapshot will still be there
 
 2.9 EC2 Instance deleted : <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/EC2%20Instance%20terminated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
-2.9 EC2 Instance terminated : <br/>
+2.10 Volume got deleted after EC2 instance termination : <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/Volume%20got%20deleted%20after%20EC2%20instance%20termination.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
-2.9 Volume got deleted after EC2 instance termination : <br/>
+2.11 Snapshot did not got deleted after EC2 instance termination : <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
-<br />
-<br />
-
-2.9 Snapshot did not got deleted after EC2 instance termination : <br/>
-
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/Snapshot%20did%20not%20got%20deleted%20after%20EC2%20instance%20termination.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
 Now that the EC2 Instance has been deleted along side with the volume, Let run the test of our lambda function again,
 this time we are expecting the snapshot to be deleted. we can clearly see the message: "Deleted EBS snapshot snap-06cdbf1bee3e70ad5 as its associated volume was not found"
 
-2.10 Lambda function was able to delete the Snapshot after EC2 instance termination: <br/>
+2.12 Lambda function was able to delete the Snapshot after EC2 instance termination: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/Lambda%20function%20was%20able%20to%20delte%20the%20Snapshot%20after%20EC2%20instance%20termination.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
-2.11 Snapshot got deleted after EC2 instance termination and lambda function tested again: <br/>
+2.13 Snapshot got deleted after EC2 instance termination and lambda function tested again: <br/>
 
-<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<img src="https://github.com/jpap19/AWS-Cloud-Cost-Optimization/blob/main/Images/Snapshot%20got%20deleted%20after%20EC2%20instance%20termination%20and%20lambda%20function%20tested%20again.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
 <br />
 <br />
 
 CONCLUSION: <br/>
 
-In this project, we have implemented an AWS Cost Optimization by creating a lambda function that will delete all snapshots that has a volume not associated to any EC2 instance.
+In this project, we have implemented an AWS Cost Optimization by creating a lambda function that will delete each snapshot that has a volume not associated to any EC2 instance.
 
 <!--
  ```diff
