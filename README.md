@@ -67,7 +67,8 @@ Will go the lambda dashboard click on create function, choose python as runtime,
 <br />
 <br />
 
-Now we will replace the code in the lambda function by the python code below:
+Now we will replace the code in the lambda function by the python code below: The code is built to list all snapshots, list all volumes, list all running EC2 instances. 
+Then it will verify if a snapshot belongs to a volume and if that volume is attached to a running EC2 instance, and delete that snapshot if it is not the case.
 
 2.2 ebs_stale_snapshots_python code: <br/>
 
@@ -177,7 +178,7 @@ this time we are expecting the snapshot to be deleted. we can clearly see the me
 
 CONCLUSION: <br/>
 
-In this project, we have implemented an AWS Cost Optimization by creating a lambda function that will delete all snapshots created from a volume not associated to any EC2 instance.
+In this project, we have implemented an AWS Cost Optimization by creating a lambda function that will delete all snapshots that has a volume not associated to any EC2 instance.
 
 <!--
  ```diff
