@@ -125,7 +125,8 @@ After the new permission granted to the lambda fuunction to list and delete. let
 <br />
 <br />
 
-After grating the required permission to delete, decribe snapshot and instances, the lambad function script is executed, but the instance is still not deleted. This is exepected and the snapshot is 
+After grating the required permission to delete, decribe snapshot and instances, the lambad function script is executed, but the snapshot is still not deleted. 
+This is expected as the snapshot is as its volume associated with the EC2 imstance.
 
 2.8 Lambda function got executed this time : <br/>
 
@@ -159,11 +160,24 @@ Now let delete our EC2 Instance, this will delete the volume as well, but the sn
 <br />
 <br />
 
+Now that the EC2 Instance has been deleted along side with the volume, Let run the test of our lambda function again,
+this time we are expecting the snapshot to be deleted. we can clearly see the message: "Deleted EBS snapshot snap-06cdbf1bee3e70ad5 as its associated volume was not found"
+
+2.10 Lambda function was able to delete the Snapshot after EC2 instance termination: <br/>
+
+<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<br />
+<br />
+
+2.11 Snapshot got deleted after EC2 instance termination and lambda function tested again: <br/>
+
+<img src="https://github.com/jpap19/A-Simple-Elastic-SIEM-Lab/blob/main/Images/FreeAccountCreated.png" height="150%" width="100%" alt="AWS Cloud Cost Optimization"/>
+<br />
+<br />
 
 CONCLUSION: <br/>
 
-In this activity, we have set up a home lab using Elastic SIEM and a Kali VM. We forwarded data from the Kali VM to the SIEM using the Elastic Beats agent, generated security events on the Kali VM using Nmap, and queried and analyzed the logs in the SIEM using the Elastic web interface. We also created a dashboard to visualize security events and then created an alert to detect security events.
-
+In this project, we have implemented an AWS Cost Optimization by creating a lambda function that will delete all snapshots created from a volume not associated to any EC2 instance.
 
 <!--
  ```diff
