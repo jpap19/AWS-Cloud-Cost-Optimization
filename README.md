@@ -15,14 +15,16 @@ For each snapshot, it checks if the associated volume (if exists) is not associa
 
 <h2>Program walk-through:</h2>
 
-<p align="center">
- 
 The implementation will be in done in 6 Steps:
 
 STEP 1: Create an EBS volume snapshot of a virtual machine (EC2 instance).
 
 STEP 2: Create a lambda function to delete the virtual machine (EC2 instance).
+
+<p align="center">
  
+<h2>Program walk-through:</h2>
+
 STEP 1: Create an EBS volume snapshot of a virtual machine (EC2 instance): <br/>
 
 Here we will create an EC2 instance and then create a snapshot of that instance, which basically an image of the instance.
