@@ -1,3 +1,0 @@
-I am just testing git pull origin command
-
-Another testing on the git pull command
